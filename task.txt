@@ -1,0 +1,7 @@
+
+    ***** PROCEDURE THAT I'M GOING TO MAKE MY WEBSITE BEAUTIFUL *******
+
+Content:
+    * make it first responsive:
+        - resize the banner by it's break point sm/md/lg
+        - 
