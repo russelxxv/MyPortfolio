@@ -4,4 +4,4 @@
 Content:
     * make it first responsive:
         - resize the banner by it's break point sm/md/lg (not finished)
-        - 
+        - resize it by using Photoshop
