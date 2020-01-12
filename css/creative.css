@@ -556,6 +556,28 @@ pre code {
     max-width: 540px;
   }
 }
+@media only screen and (min-width: 425px) and (max-width: 430px) {
+  #myName {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  #myName {
+    font-size: 0.8rem;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  header.masthead {
+    padding-top: 6rem !important;
+    padding-bottom: 0 !important;
+  }
+  /* #carouselExampleControls{
+    height: 100vh !important;
+  } */
+}
 
 @media (min-width: 768px) {
   .container {
@@ -10565,7 +10587,7 @@ html {
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #ff4800;
+  border-color: #343a40;
 }
 
 hr.light {
@@ -10682,6 +10704,15 @@ header.masthead {
   background-size: cover;
   height: auto;
 }
+@media only screen and (min-width: 768px) and (max-width:991px){
+  header.masthead {
+    padding-top: 5.8rem;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  /* Styles */
+}
 
 header.masthead h1 {
   font-size: 2.25rem;
@@ -10738,10 +10769,11 @@ header.masthead h1 {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  background: rgba(56, 57, 61, 0.486);
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
   text-align: center;
+  border-radius: 10px;
 }
 
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category {

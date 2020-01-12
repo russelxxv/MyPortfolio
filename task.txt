@@ -3,5 +3,8 @@
 
 Content:
     * make it first responsive:
-        - resize the banner by it's break point sm/md/lg (not finished)
-        - resize it by using Photoshop
+        - resize the banner by it's break point sm/md/lg (slightly finished soon need improvement for the picture)
+        - resize it by using Photoshop (finshed but needs improvement)
+    * about section make it responsive and good layout in all devices:
+        - target with effect on scroll or on window focus (not started)
+        - target add a resume that redirects to another page with my resume only
