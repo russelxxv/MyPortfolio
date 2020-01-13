@@ -22,8 +22,7 @@
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/main.css" rel="stylesheet">
   <link href="css/creative.css" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/c76bb2aadf.js"></script>
+  <link rel="stylesheet" href="css/animate-plugin/animate.min.css">
 </head>
 
 <body id="page-top">
@@ -43,16 +42,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger text-white" href="#aboutme-section">AboutME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#services">Achievements</a>
+            <a class="nav-link js-scroll-trigger text-white" href="#achievement-section">Achievements</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#portfolio">Projects</a>
+            <a class="nav-link js-scroll-trigger text-white" href="#portfolio-section">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger text-white" href="#contact-section">Contact</a>
           </li>
         </ul>
       </div>
@@ -60,7 +59,7 @@
   </nav>
 
   <!-- Masthead hed-->
-  <header class="masthead">
+  <header id="header-section" class="masthead" data-inview="header-section">
     <!-- <div class="container h-100 pt-3 pb-3">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
@@ -124,116 +123,144 @@
   </header>
 
   <!-- About Section -->
-  <section class="page-section bg-primary" id="about">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0 aboutHead">A BIT ABOUT ME:</h2>
-          <hr class="divider light my-4">
-          <p class="text-white mb-4 text-justify">
-            Hello! I'm John Russel Dellosa a fresh college graduate of Bachelor of Science in Information Technology with an honor of Cum Laude.
-            I love to write codes in web development specializing in back end development using PHP, Ajax, jQuery and json.
-            I am also good at CSS3, HTML5, Bootstrap and other libraries for bulding front end web app.
-          </p>
-          <!-- <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a> -->
+  <section class="page-section bg-primary p-5" id="aboutme-section" data-inview="about-section">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-8 text-center mb-2">
+        <h1 class="text-white mt-0 aboutHead animated">A BIT ABOUT ME:</h1>
+        <hr class="divider light my-4">
+      </div>
+    </div>
+    <div class="row">
+      <!-- PERSONAL INFO -->
+      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+        <div class="card bg-transparent border-0 animated">
+          <img src="img/aboutme-logo-pinfo.png" class="card-img-top" alt="Personal Info">
+          <!-- <span class="csm-divider"></span> -->
+          <div class="card-body p-5 text-center mt-3">
+            <!-- <h5 class="card-title">Personal Info</h5> -->
+            <table class="table table-borderless table-sm ml-3">
+              <tbody class="cus-tbl">
+                <tr>
+                  <th scope="row"><i class="fas fa-home"></i></th>
+                  <td>Kasiglahan Vill SanJose Rod., Rizal.</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-calendar-alt"></i></th>
+                  <td>October 25, 1995</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-venus"></i></th>
+                  <td>Single</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-mars"></i></th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-flag"></i></th>
+                  <td>Filipino</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-church"></i></th>
+                  <td>Roman Catholic</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <div class="row">
-      	<div class="col-md-6 col-sm-12">
-      		<h3 class="aboutHead"> Personal Information <i class="fa fa-user-circle" aria-hidden="true"></i></h3>
-	      	<ul class="list-group list-group-flush">
-            <li class="list-group-item">Name: John Russel B. Dellosa</li>
-            <li class="list-group-item">Age: 23</li>
-            <li class="list-group-item">Date of Birth: October 25, 1995</li>
-            <li class="list-group-item">Address: Kasiglahan Vill. San Jose Rodriguez, Rizal.</li>
-          </ul>
-          
-      		<h3 class="aboutHead" style="margin-top:6%;"> Education <i class="fa fa-graduation-cap" aria-hidden="true"></i></h3>
-	      	<ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5>Bachelor of Science in Information Technology</h5>
-              <ul id="college" class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -15px !important;">
-                  Colegio de Montalban
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -20px !important;">
-                  Kasiglahan Village San Jose Rodriguez, Rizal.
-                </li>
-              </ul>
-            </li>
-            <li class="list-group-item"><h5>High School</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -10px !important;">
-                  Kasiglahan National High School
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -15px !important;">
-                  Kasiglahan Village San Jose Rodriguez, Rizal.
-                </li>
-              </ul>
-            </li>
-            <li class="list-group-item"><h5>Primary</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -10px !important;">
-                  Kasiglahan Elementary
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -15px !important;">
-                  Kasiglahan Village San Jose Rodriguez, Rizal.
-                </li>
-              </ul>
-            </li>
-          </ul>
+      <!-- /END OF PERSONAL INFO -->
+      <!-- EDUCATION -->
+      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+        <div class="card bg-transparent border-0 animated">
+          <img src="img/aboutme-logo-education.png" class="card-img-top" alt="Education">
+          <!-- <span class="csm-divider"></span> -->
+          <div class="card-body p-5 text-center mt-3">
+            <!-- <h5 class="card-title">Education</h5> -->
+            <table class="table table-borderless table-sm my-auto">
+              <tbody class="cus-tbl">
+                <tr>
+                  <th scope="row"><i class="fas fa-graduation-cap"></i></th>
+                  <td>
+                    BS in Information Technology
+                    <ul>
+                      <li>Colegio de Montalban</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-graduation-cap"></i></th>
+                  <td>Kasiglahan Vill. Nat' High School</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-graduation-cap"></i></th>
+                  <td>Kasiglahan Vill. Elementary School</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+      <!-- /END OF EDUCATION -->
+      <!-- TECHNOLOGIES AND SKILLS -->
+      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+        <div class="card bg-transparent border-0 animated">
+          <img src="img/aboutme-logo-laptopcode.png" class="card-img-top" alt="Technologies and Skills">
+          <!-- <span class="csm-divider"></span> -->
+          <div class="card-body p-5 text-center mt-3">
+            <!-- <h5 class="card-title">Technologies and Skills</h5> -->
+            <table class="table table-borderless table-sm my-auto ml-3" id="tblCodes">
+              <tbody class="cus-tbl-codes">
+                <tr>
+                  <th scope="row"><i class="fab fa-html5"></i></th>
+                  <td>HTML5</td>
+                  <th scope="row"><i class="fab fa-css3-alt"></i></th>
+                  <td>CCS3</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fab fa-bootstrap"></i></th>
+                  <td>Bootstrap4</td>
+                  <th scope="row"><i class="fab fa-wordpress"></i></th>
+                  <td>Wordpress</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fab fa-js-square"></i></th>
+                  <td>JavaScript</td>
+                  <th scope="row"><i class="fab fa-js-square"></i></th>
+                  <td>jQuery</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fab fa-js-square"></i></th>
+                  <td>Ajax</td>
+                  <th scope="row"><i class="fab fa-js-square"></i></th>
+                  <td>Json</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fab fa-php"></i></th>
+                  <td>PHP</td>
+                  <th scope="row"><i class="fas fa-database"></i></th>
+                  <td>MySQL</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fab fa-python"></i></th>
+                  <td>Python</td>
+                  <th scope="row"><i class="fab fa-java"></i></th>
+                  <td>Java</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- /END OF EDUCATION -->
 
-        <div class="col-md-6 col-sm-12">
-          <h3 class="aboutHead"> Technical Skills <i class="fa fa-cogs" aria-hidden="true"></i></h3>
-          <ul class="list-group list-group-flush" type="circle">
-            <li class="list-group-item">Web Development and Web design</li>
-            <li class="list-group-item">Programming front end and back end coding</li>
-            <li class="list-group-item">Operating systems: Windows, Mac, Raspberry Pi, Linux</li>
-            <li class="list-group-item">Languages: Java, Visual Studio .Net, HTML5, CSS3, Javascript, PHP and Mysql.</li>
-            <li class="list-group-item">Others: Android Studio, Wordpress</li>
-          </ul>
-          
-          <h3 class="aboutHead" style="margin-top: 3% !important;"> Training and Seminars <i class="fa fa-lightbulb" aria-hidden="true"></i></h3>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5>Basic Web Installation and Development Training</h5>
-              <ul id="college" class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -15px !important;">
-                  February 13, 2019
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -20px !important;">
-                  Department of Agriculture (Office of the Secretary)
-                </li>
-              </ul>
-            </li>
-            <li class="list-group-item"><h5>Big Data Analytics</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -10px !important;">
-                  February 25, 2018
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -15px !important;">
-                  Tanghalang Pasigueño, Pasig City Philippines
-                </li>
-              </ul>
-            </li>
-            <li class="list-group-item"><h5>Machine Learning</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item" style="border: none !important; margin-top: -10px !important;">
-                  February 25, 2018
-                </li>
-                <li class="list-group-item" style="border-style:none !important; margin-top: -15px !important;">
-                  Tanghalang Pasigueño, Pasig City Philippines
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-		</div>
+    </div>
   </section>
 
   <!-- ACHIEVEMENT Section -->
-  <section class="page-section" id="services">
+  <section class="page-section" id="achievement-section" data-inview="achievement-section">
     <div class="container">
-      <h2 class="text-center mt-0">ACHIEVEMENTS</h2>
+      <h2 class="text-center mt-0 titleAchievements animated">ACHIEVEMENTS</h2>
       <hr class="divider my-4">
       <div class="row">
         <div class="col-lg-4 col-md-6 text-center">
@@ -269,10 +296,10 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
+  <section id="portfolio-section">
     <div class="container-fluid p-0">
       <div class="row no-gutters justify-content-center p-3">
-        <div class="col-lg-4 col-sm-6 p-1">
+        <div class="col-lg-4 col-sm-6 p-1 animated">
           <a class="portfolio-box" href="img/portfolio/fullsize/web-project-1.png">
             <img class="img-fluid" src="img/portfolio/thumbnails/web-project-1.jpg" alt="">
             <div class="portfolio-box-caption">
@@ -285,7 +312,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-sm-6 p-1">
+        <div class="col-lg-4 col-sm-6 p-1 animated">
           <a class="portfolio-box" href="img/portfolio/fullsize/web-project-2.png">
             <img class="img-fluid" src="img/portfolio/thumbnails/web-project-2.jpg" alt="">
             <div class="portfolio-box-caption">
@@ -298,7 +325,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-sm-6 p-1">
+        <div class="col-lg-4 col-sm-6 p-1 animated">
           <a class="portfolio-box" href="img/portfolio/fullsize/web-project-3.png">
             <img class="img-fluid" src="img/portfolio/thumbnails/web-project-3.jpg" alt="">
             <div class="portfolio-box-caption">
@@ -311,7 +338,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 animated">
           <a class="portfolio-box" href="img/portfolio/fullsize/capstone-project-3.png">
             <img class="img-fluid" src="img/portfolio/thumbnails/capstone-project-3.jpg" alt="">
             <div class="portfolio-box-caption">
@@ -363,7 +390,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section class="page-section" id="contact-section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -434,8 +461,17 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+  <!-- jQueryUI -->
+  <script src="vendor/jqueryui/jquery-ui.min.js"></script>
+  
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/c76bb2aadf.js"></script>
+  <!-- in-view-js -->
+  <script src="js/in-view.min.js"></script>
+
   <!-- Custom scripts for this template -->
   <script src="js/creative.js"></script>
+  <script src="js/main.js"></script>
   <script>
     $(window).on("load", function () {
       $(".loader").fadeOut();

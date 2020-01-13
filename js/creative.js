@@ -7,6 +7,13 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
+        var $t = $(this.hash).find(".animated");
+        console.log("L: "+ $t.length);
+        $.each($t, function(){
+          var $tar = $(this);
+          $tar.removeClass("viewed");
+        });
+        
         $('html, body').animate({
           scrollTop: (target.offset().top - 72)
         }, 1000, "easeInOutExpo");
@@ -32,6 +39,12 @@
       $("#mainNav").addClass("navbar-scrolled");
     } else {
       $("#mainNav").removeClass("navbar-scrolled");
+      // below is my custom codes
+      var $el = $(".viewed");
+      $.each($el, function(){
+          var $elm = $(this);
+          $elm.removeClass("viewed");
+      });
     }
   };
   // Collapse now if page is not at top
@@ -40,7 +53,7 @@
   $(window).scroll(navbarCollapse);
 
   // Magnific popup calls
-  $('#portfolio').magnificPopup({
+  $('#portfolio-section').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
