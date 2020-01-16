@@ -130,15 +130,16 @@
         <hr class="divider light my-4">
       </div>
     </div>
-    <div class="row">
+    <!-- START OF DESKTOP VIEW -->
+    <div class="row" id="desk-view">
       <!-- PERSONAL INFO -->
-      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
         <div class="card bg-transparent border-0 animated">
-          <img src="img/aboutme-logo-pinfo.png" class="card-img-top" alt="Personal Info">
+          <img src="img/aboutme-logo-pinfo.png" class="card-img-top animated" alt="Personal Info">
           <!-- <span class="csm-divider"></span> -->
           <div class="card-body p-5 text-center mt-3">
             <!-- <h5 class="card-title">Personal Info</h5> -->
-            <table class="table table-borderless table-sm ml-3">
+            <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-pinfo">
               <tbody class="cus-tbl">
                 <tr>
                   <th scope="row"><i class="fas fa-home"></i></th>
@@ -171,22 +172,17 @@
       </div>
       <!-- /END OF PERSONAL INFO -->
       <!-- EDUCATION -->
-      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
         <div class="card bg-transparent border-0 animated">
-          <img src="img/aboutme-logo-education.png" class="card-img-top" alt="Education">
+          <img src="img/aboutme-logo-education.png" class="card-img-top animated" alt="Education">
           <!-- <span class="csm-divider"></span> -->
           <div class="card-body p-5 text-center mt-3">
             <!-- <h5 class="card-title">Education</h5> -->
-            <table class="table table-borderless table-sm my-auto">
+            <table class="table table-borderless table-sm animated table-responsive tbl-educ">
               <tbody class="cus-tbl">
                 <tr>
                   <th scope="row"><i class="fas fa-graduation-cap"></i></th>
-                  <td>
-                    BS in Information Technology
-                    <ul>
-                      <li>Colegio de Montalban</li>
-                    </ul>
-                  </td>
+                  <td>BS in Information Technology</td>
                 </tr>
                 <tr>
                   <th scope="row"><i class="fas fa-graduation-cap"></i></th>
@@ -203,13 +199,13 @@
       </div>
       <!-- /END OF EDUCATION -->
       <!-- TECHNOLOGIES AND SKILLS -->
-      <div class="col-lg-4 col-xl-4 pt-3 aboutMe">
+      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
         <div class="card bg-transparent border-0 animated">
-          <img src="img/aboutme-logo-laptopcode.png" class="card-img-top" alt="Technologies and Skills">
+          <img src="img/aboutme-logo-laptopcode.png" class="card-img-top animated" alt="Technologies and Skills">
           <!-- <span class="csm-divider"></span> -->
           <div class="card-body p-5 text-center mt-3">
             <!-- <h5 class="card-title">Technologies and Skills</h5> -->
-            <table class="table table-borderless table-sm my-auto ml-3" id="tblCodes">
+            <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-techskill" id="tblCodes">
               <tbody class="cus-tbl-codes">
                 <tr>
                   <th scope="row"><i class="fab fa-html5"></i></th>
@@ -255,6 +251,11 @@
       <!-- /END OF EDUCATION -->
 
     </div>
+    <!-- /END OF DESKTOP VIEW -->
+
+    <!-- START OF TABLET VIEW -->
+      <!-- comment muna -->
+    <!-- /END OF TABLET VIEW -->
   </section>
 
   <!-- ACHIEVEMENT Section -->
@@ -267,7 +268,7 @@
           <div class="mt-5">
             <i class="fas fa-4x fa-graduation-cap text-dark mb-4"></i>
             <h3 class="h4 mb-2">Cum Laude</h3>
-            <p class="text-muted mb-0">Achieving this award proving that I am flexible enough to take any responsiblities as a programmer of your company</p>
+            <p class="text-muted mb-0">Achieving this award, proving that I am flexible enough to take any responsibilities as a <strong>Web Developer</strong> of your company.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 text-center">
@@ -279,7 +280,7 @@
         </div>
         <div class="col-lg-4 col-md-12 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-dark mb-4"></i>
+            <i class="fas fa-4x fa-gem text-dark mb-4"></i>
             <h3 class="h4 mb-2">Best Capstone Project</h3>
             <p class="text-muted mb-0">The Speaking Glove using Raspberry Pi, Arduino, Flex Sensors, Accelerometer Sensor and Android Studio IDE for developing Android Application.</p>
           </div>

@@ -7,10 +7,11 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-        var $t = $(this.hash).find(".animated");
-        console.log("L: "+ $t.length);
+        var $t = $(this.hash).find(".viewed");
+        // console.log("L: "+ $t.length);
         $.each($t, function(){
           var $tar = $(this);
+          // console.log($tar);
           $tar.removeClass("viewed");
         });
         
