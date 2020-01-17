@@ -41,14 +41,17 @@ $(document).ready(function()
         }
         if(!$(".aboutMe>.card").hasClass("viewed"))
         {
-            // $(".card-body>table").css("visibility", "hidden");
+            $(".aboutMe").removeClass("finished-animating");
             $(".aboutMe>.card").addClass("viewed zoomIn fast",
             function(){
                 if(!$(".card-body>table").hasClass("viewed")){
-                    $(".card-body>table").addClass("viewed fadeInUp fast",
+                    $(".card-body>table").addClass("viewed fadeInUp delay-1s fast",
                     function(){
                         if(!$(".card>img").hasClass("viewed")){
-                            $(".card>img").addClass("viewed bounce");
+                            $(".card>img").addClass("viewed bounce delay-1s",
+                            function() {
+                                $(".aboutMe").addClass("finished-animating");
+                            });
                         }
                     });
                 }
@@ -56,8 +59,9 @@ $(document).ready(function()
         }
     }).on("exit", function() {
         $(".aboutMe>.card").removeClass("zoomIn fast");
-        $(".card-body>table").removeClass("fadeInUp fast");
-        $(".card>img").removeClass("bounce");
+        $(".card-body>table").removeClass("fadeInUp delay-1s fast");
+        $(".card>img").removeClass("bounce delay-1s");
+        // $(".aboutMe").removeClass("finished-animating");
     });
     
     //********** /ABOUTME *****************/
@@ -80,9 +84,12 @@ $(document).ready(function()
 
     $(".aboutMe").hover(
         function() {
-            var title = $(this).find(".card-title");
-            $(this).addClass("hvr-float");
-            title.show().addClass("flip fast");
+            if($(this).hasClass("finished-animating"))
+            {
+                var title = $(this).find(".card-title");
+                $(this).addClass("hvr-float");
+                title.show().addClass("flip fast");
+            }
         },
         function() {
             $(this).removeClass("hvr-float");
@@ -154,6 +161,8 @@ $(document).ready(function()
                 "cursor" : "pointer"
             });
             /********* /END OF ACHIEVEMENT SECTION */
+
+            return; // always last
         }
         if(width >= 426 && width <= 765)
         {
@@ -192,6 +201,8 @@ $(document).ready(function()
                 });
             }
             /********* /END OF ACHIEVEMENT SECTION */
+
+            return; // always last
         }
         /********************* /END OF MOBIL VIEW  */
 
@@ -209,12 +220,9 @@ $(document).ready(function()
                 "margin" : "0 auto"
             });
             if(width >= 850 && width <= 990){
-                // $(".card-body>table").removeClass("ml-4");
-                // $(".card-body>.tbl-pinfo").removeClass("ml-2").addClass("ml-5");
-                // $(".card-body>.tbl-techskill").removeClass("ml-2").addClass("ml-5");
-                // $(".card-body>.tbl-educ").removeClass("ml-2").addClass("ml-5");
-            } else {
-                // $(".card-body>table").removeClass("ml-4").addClass("ml-3");
+                $(".card-body>.tbl-pinfo").css("marginLeft","4rem");
+                $(".card-body>.tbl-techskill").css("marginLeft","4rem");
+                $(".card-body>.tbl-educ").css("marginLeft","3rem");
             }
             /******** /END OF ABOUT ME SECTION */
 
@@ -235,11 +243,13 @@ $(document).ready(function()
                 "cursor" : "pointer"
             });
             /******** /END OF ACHIEVEMENT SECTION */
+
+            return; // always last
         }
         /******* /END OF TABLET VIEW */
 
         /******* START OF DESKTOP VIEW */
-        if(width >= 992)
+        if(width >= 992 && width <= 1199)
         {
             /**** ABOUTME SECTION */
             $(".aboutHead").css("fontSize", "2.5rem"); //title head
@@ -270,6 +280,46 @@ $(document).ready(function()
                 "cursor" : "pointer"
             });
             /**** /END OF ACHIEVEMENT SECTION */
+
+            return; // always last
+        }
+        if(width >= 1200)
+        {
+            /**** ABOUTME SECTION */
+            $(".aboutHead").css("fontSize", "2.5rem"); //title head
+            $(".aboutMe>.card>.card-body").removeClass("p-5 ml-4").addClass("p-5");
+            $(".card>.card-img-top").css({
+                "width" : "55%",
+                "margin" : "0 auto"
+            });
+            // $(".card-body").css("border", "1px solid red");
+            // $(".card-body>table").css({
+            //     "border" : "1px solid red"
+            // }).addClass("table-bordered").removeClass("table-borderless");
+            $(".card-body>.tbl-pinfo").css("marginLeft","2rem");
+            $(".card-body>.tbl-techskill").css("marginLeft","1rem");
+            $(".card-body>.tbl-educ").css("marginLeft","2rem");
+            /**** /END OF ABOUT ME SECTION */
+
+            /**** ACHIEVEMENT SECTION */
+            $(".titleAchievements").css("fontSize","2.5rem");
+            $(".achieve-flip").css({
+                "marginTop" : "2rem",
+                "marginBottom" : "2rem"
+            });
+            $(".achieve-flip>.front").css({
+                "paddingRight":"2rem",
+                "marginTop":"4rem"
+            });
+            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
+            $(".achieve-flip>.back>img").css({
+                "width" : "80%",
+                "heigth" : "80%",
+                "cursor" : "pointer"
+            });
+            /**** /END OF ACHIEVEMENT SECTION */
+
+            return; // always last
         }
         /******* /END OF DESKTOP VIEW */
     }

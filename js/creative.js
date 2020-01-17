@@ -55,6 +55,11 @@
           var $elm = $(this);
           $elm.removeClass("viewed");
       });
+      var $secElm = $("section");
+        $.each($secElm, function() {
+          $(this).removeClass("animeted-false");
+        });
+        // end of my custom codes
     }
   };
   // Collapse now if page is not at top
