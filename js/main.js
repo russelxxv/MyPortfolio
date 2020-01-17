@@ -19,6 +19,11 @@ $(document).ready(function()
 
     /************** ABOUTME ***************/ 
     inView(".aboutHead").on("enter", function() {
+
+        if($("#aboutme-section").hasClass("animeted-false")){
+            return false;
+        }
+        
         if(!$(".aboutHead").hasClass("viewed")){
             $(".aboutHead").addClass("viewed jackInTheBox");
         }  
@@ -27,31 +32,39 @@ $(document).ready(function()
     });
 
     inView(".aboutMe>.card").on("enter", function() {
-        if(!$(".aboutMe>.card").hasClass("viewed")) {
+        if($("#aboutme-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(".aboutMe>.card").hasClass("viewed"))
+        {
             // $(".card-body>table").css("visibility", "hidden");
-            $(".aboutMe>.card").css("visibility", "visible").addClass("viewed zoomIn",
+            $(".aboutMe>.card").addClass("viewed zoomIn fast",
             function(){
                 if(!$(".card-body>table").hasClass("viewed")){
-                    $(".card-body>table").css("visibility","visible").addClass("viewed fadeInUp delay-1s faster",
+                    $(".card-body>table").addClass("viewed fadeInUp fast",
                     function(){
                         if(!$(".card>img").hasClass("viewed")){
-                            $(".card>img").addClass("viewed bounce delay-1s");
+                            $(".card>img").addClass("viewed bounce");
                         }
                     });
                 }
             });
         }
     }).on("exit", function() {
-        $(".aboutMe>.card").removeClass("zoomIn delay-1s");
-        $(".card-body>table").removeClass("fadeInUp delay-1s faster");
-        $(".card>img").removeClass("bounce delay-1s");
+        $(".aboutMe>.card").removeClass("zoomIn fast");
+        $(".card-body>table").removeClass("fadeInUp fast");
+        $(".card>img").removeClass("bounce");
     });
-
     
     //********** /ABOUTME *****************/
 
+
     /**************** ACHIEVEMENTS **************/ 
     inView(".titleAchievements").on("enter", function(){
+        
+        if($("#achievement-section").hasClass("animeted-false")){
+            return false;
+        }
         if(!$(".titleAchievements").hasClass("viewed")){
             $(".titleAchievements").addClass("viewed jackInTheBox");
         }
@@ -59,20 +72,31 @@ $(document).ready(function()
         $(".titleAchievements").removeClass("jackInTheBox");
     });
     /**************** /ACHIEVEMENTS **************/ 
-
-
     /******* /END OF IN-VIEW SECTION ************************/
 
     $(".aboutMe").hover(
         function() {
-            $(this).addClass("about-active");
+            var title = $(this).find(".card-title");
+            $(this).addClass("hvr-float");
+            title.show().addClass("flip fast");
         },
         function() {
-            $(this).removeClass("about-active")
+            $(this).removeClass("hvr-float");
+            var title = $(this).find(".card-title");
+            title.hide().removeClass("flip fast");
+        }
+    );
+    
+    $(".navbar-nav>.nav-item").hover(
+        function() {
+            $("a", this).addClass("hvr-grow");
+        },
+        function() {
+            $("a", this).removeClass("hvr-grow");
         }
     );
     /******** /END OF FOR SCROLLING THE PAGE ANIMATION */
-
+    
 
     getWindowSize();
 
@@ -92,10 +116,10 @@ $(document).ready(function()
             $(".aboutHead").css("fontSize", "2rem"); //title head
             $(".aboutMe>.card>.card-body").removeClass("p-5 ml-4").addClass("p-3");
             if(width >= 375 && width <= 425){
-                $(".card-body>.pinfo").addClass("ml-4");
-                $(".card-body>.techskill").addClass("ml-4");
+                $(".card-body>.pinfo").removeClass("ml-2").addClass("ml-4");
+                $(".card-body>.techskill").removeClass("ml-2").addClass("ml-4");
             } else {
-                $(".card-body>table").removeClass("ml-4");
+                $(".card-body>table").removeClass("ml-4 ml-2");
             }
             $(".card>.card-img-top").css({
                 "width" : "60%",
@@ -129,9 +153,9 @@ $(document).ready(function()
             });
             if(width >= 850 && width <= 990){
                 $(".card-body>table").removeClass("ml-4");
-                $(".card-body>.tbl-pinfo").addClass("ml-5");
-                $(".card-body>.tbl-techskill").addClass("ml-5");
-                $(".card-body>.tbl-educ").addClass("ml-5");
+                $(".card-body>.tbl-pinfo").removeClass("ml-2").addClass("ml-5");
+                $(".card-body>.tbl-techskill").removeClass("ml-2").addClass("ml-5");
+                $(".card-body>.tbl-educ").removeClass("ml-2").addClass("ml-5");
             } else {
                 $(".card-body>table").removeClass("ml-4").addClass("ml-3");
             }
@@ -141,7 +165,7 @@ $(document).ready(function()
         /******* /END OF TABLET VIEW */
 
         /******* START OF DESKTOP VIEW */
-        if(width >= 1024)
+        if(width >= 1024 && width <= 1439)
         {
             /**** ABOUTME SECTION */
             $(".aboutHead").css("fontSize", "2.5rem"); //title head
@@ -151,9 +175,24 @@ $(document).ready(function()
                 "margin" : "0 auto"
             });
             $(".card-body>table").removeClass("ml-4");
-            $(".card-body>.tbl-pinfo").removeClass("ml-5").addClass("ml-5");
-            $(".card-body>.tbl-techskill").removeClass("ml-5").addClass("ml-5");
-            $(".card-body>.tbl-educ").removeClass("ml-5").addClass("ml-3");
+            $(".card-body>.tbl-pinfo").removeClass("ml-5").addClass("ml-2");
+            $(".card-body>.tbl-techskill").removeClass("ml-5").addClass("ml-2");
+            $(".card-body>.tbl-educ").removeClass("ml-5").addClass("ml-2");
+            /**** /END OF ABOUT ME SECTION */
+        }
+        if(width >= 1439)
+        {
+            /**** ABOUTME SECTION */
+            $(".aboutHead").css("fontSize", "2.5rem"); //title head
+            $(".aboutMe>.card>.card-body").removeClass("p-5 ml-4").addClass("p-5");
+            $(".card>.card-img-top").css({
+                "width" : "40%",
+                "margin" : "0 auto"
+            });
+            $(".card-body>table").removeClass("ml-4");
+            $(".card-body>.tbl-pinfo").removeClass("ml-5 ml-2").addClass("ml-5");
+            $(".card-body>.tbl-techskill").removeClass("ml-5 ml-2").addClass("ml-5");
+            $(".card-body>.tbl-educ").removeClass("ml-5 ml-2").addClass("ml-3");
             /**** /END OF ABOUT ME SECTION */
         }
         /******* /END OF DESKTOP VIEW */

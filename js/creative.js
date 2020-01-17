@@ -6,7 +6,15 @@
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
+      if (target.length)
+      {
+        var $secElm = $("section");
+        $.each($secElm, function() {
+          $(this).addClass("animeted-false");
+        });
+
+        $(this.hash).removeClass("animeted-false");
+        
         var $t = $(this.hash).find(".viewed");
         // console.log("L: "+ $t.length);
         $.each($t, function(){

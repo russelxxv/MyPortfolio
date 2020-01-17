@@ -10643,13 +10643,38 @@ hr.light {
 #mainNav .navbar-nav .nav-item .nav-link.active {
   /* color: #f4623a !important; */
   color: rgb(255, 255, 255);
-  text-shadow: 2px 2px 20px rgb(0, 179, 255);
+  /* text-shadow: 2px 2px 20px rgb(0, 179, 255); */
   /* border-bottom: 3px solid rgb(0, 179, 255);
   padding-bottom: 5px; */
+  border-radius: 5% !important;
+	  /* do not edit below */
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(255, 9, 9, 0);
+	overflow: hidden;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-animation-name: hvr-back-pulse;
+	animation-name: hvr-back-pulse;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	background-color: #2098D1;
+	background-color: #2099d17a;
+	color: white;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
   /* color: #f4623a !important; */
-  text-shadow: 2px 2px 20px rgb(0, 179, 255) ;
+  text-shadow: 2px 2px 20px rgb(0, 179, 255);
 }
 
 @media (min-width: 992px) {
@@ -10799,8 +10824,4 @@ header.masthead h1 {
 }
 .list-group-item {
   border-top: none !important;
-}
-#aboutMe li{
-  /* margin-top: -10px !important; */
-  border: none !important;
 }

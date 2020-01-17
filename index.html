@@ -43,18 +43,18 @@
         <span class="navbar-toggler-icon bg-white"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#aboutme-section">AboutME</a>
+            <a class="nav-link js-scroll-trigger text-white p-3" href="#aboutme-section">AboutME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#achievement-section">Achievements</a>
+            <a class="nav-link js-scroll-trigger text-white p-3" href="#achievement-section">Achievements</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#portfolio-section">Projects</a>
+            <a class="nav-link js-scroll-trigger text-white p-3" href="#portfolio-section">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-white" href="#contact-section">Contact</a>
+            <a class="nav-link js-scroll-trigger text-white p-3" href="#contact-section">Contact</a>
           </li>
         </ul>
       </div>
@@ -129,19 +129,19 @@
   <section class="page-section bg-primary p-5" id="aboutme-section" data-inview="about-section">
     <div class="row justify-content-center">
       <div class="col-lg-8 col-xl-8 text-center mb-2">
-        <h1 class="text-white mt-0 aboutHead animated">A BIT ABOUT ME:</h1>
+        <h1 class="text-white mt-0 aboutHead animated">A BIT ABOUT ME</h1>
         <hr class="divider light my-4">
       </div>
     </div>
     <!-- START OF DESKTOP VIEW -->
     <div class="row" id="desk-view">
       <!-- PERSONAL INFO -->
-      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
+      <div class="aboutMe col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3">
         <div class="card bg-transparent border-0 animated">
           <img src="img/aboutme-logo-pinfo.png" class="card-img-top animated" alt="Personal Info">
           <!-- <span class="csm-divider"></span> -->
-          <div class="card-body p-5 text-center mt-3">
-            <!-- <h5 class="card-title">Personal Info</h5> -->
+          <div class="card-body p-3 text-center mt-3">
+            <h5 class="card-title animated" style="display: none;">Personal Info</h5>
             <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-pinfo">
               <tbody class="cus-tbl">
                 <tr>
@@ -175,12 +175,12 @@
       </div>
       <!-- /END OF PERSONAL INFO -->
       <!-- EDUCATION -->
-      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
+      <div class="aboutMe col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3">
         <div class="card bg-transparent border-0 animated">
           <img src="img/aboutme-logo-education.png" class="card-img-top animated" alt="Education">
           <!-- <span class="csm-divider"></span> -->
-          <div class="card-body p-5 text-center mt-3">
-            <!-- <h5 class="card-title">Education</h5> -->
+          <div class="card-body p-3 text-center mt-3">
+            <h5 class="card-title animated" style="display: none;">Education</h5>
             <table class="table table-borderless table-sm animated table-responsive tbl-educ">
               <tbody class="cus-tbl">
                 <tr>
@@ -202,12 +202,12 @@
       </div>
       <!-- /END OF EDUCATION -->
       <!-- TECHNOLOGIES AND SKILLS -->
-      <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3 aboutMe">
+      <div class="aboutMe col-lg-4 col-xl-4 col-md-6 col-sm-12 pt-3">
         <div class="card bg-transparent border-0 animated">
           <img src="img/aboutme-logo-laptopcode.png" class="card-img-top animated" alt="Technologies and Skills">
           <!-- <span class="csm-divider"></span> -->
-          <div class="card-body p-5 text-center mt-3">
-            <!-- <h5 class="card-title">Technologies and Skills</h5> -->
+          <div class="card-body p-3 text-center mt-3">
+            <h5 class="card-title animated" style="display: none;">Technologies and Skills</h5>
             <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-techskill" id="tblCodes">
               <tbody class="cus-tbl-codes">
                 <tr>
@@ -267,14 +267,14 @@
       <h2 class="text-center mt-0 titleAchievements animated">ACHIEVEMENTS</h2>
       <hr class="divider my-4">
       <div class="row">
-        <div class="col-lg-4 col-md-6 text-center">
+        <div class="m-flip col-lg-4 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-graduation-cap text-dark mb-4"></i>
             <h3 class="h4 mb-2">Cum Laude</h3>
             <p class="text-muted mb-0">Achieving this award, proving that I am flexible enough to take any responsibilities as a <strong>Web Developer</strong> of your company.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 text-center">
+        <div class="col-lg-4 col-md-6 text-center back">
           <div class="mt-5">
             <i class="fas fa-4x fa-laptop-code text-dark mb-4"></i>
             <h3 class="h4 mb-2">Programmer of the Year</h3>
@@ -473,9 +473,11 @@
   <!-- in-view-js -->
   <script src="js/in-view.min.js"></script>
 
+
   <!-- Custom scripts for this template -->
   <script src="js/creative.js"></script>
   <script src="js/main.js"></script>
+
   <script>
     $(window).on("load", function () {
       $(".loader").fadeOut();
