@@ -25,7 +25,7 @@
         });
         
         $('html, body').animate({
-          scrollTop: (target.offset().top - 72)
+          scrollTop: (target.offset().top) // -72
         }, 1000, "easeInOutExpo");
         return false;
       }

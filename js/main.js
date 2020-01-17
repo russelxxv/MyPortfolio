@@ -35,7 +35,7 @@ $(document).ready(function()
         $(".aboutHead").removeClass("jackInTheBox");
     });
 
-    inView(".aboutMe>.card").on("enter", function() {
+    /* inView(".aboutMe>.card").on("enter", function() {
         if($("#aboutme-section").hasClass("animeted-false")){
             return false;
         }
@@ -48,7 +48,7 @@ $(document).ready(function()
                     $(".card-body>table").addClass("viewed fadeInUp delay-1s fast",
                     function(){
                         if(!$(".card>img").hasClass("viewed")){
-                            $(".card>img").addClass("viewed bounce delay-1s",
+                            $(".card>img").addClass("viewed bounce",
                             function() {
                                 $(".aboutMe").addClass("finished-animating");
                             });
@@ -60,10 +60,28 @@ $(document).ready(function()
     }).on("exit", function() {
         $(".aboutMe>.card").removeClass("zoomIn fast");
         $(".card-body>table").removeClass("fadeInUp delay-1s fast");
-        $(".card>img").removeClass("bounce delay-1s");
+        $(".card>img").removeClass("bounce");
         // $(".aboutMe").removeClass("finished-animating");
+    }); */
+
+    inView(".aboutMe>.card").on("enter", el => {
+        if($("#aboutme-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed"))
+        {
+            $(".aboutMe").removeClass("finished-animating");
+            $(el).addClass("viewed zoomIn fast", el => {
+                $(".card-body>table", el).addClass("viewed fadeInUp delay-1s fast",
+                function() {
+                    $(".aboutMe").addClass("finished-animating");
+                });
+            });
+        }
+    }).on("exit", el => {
+        $(el).removeClass("zoomIn fast");
+        $(".card-body>table", el).removeClass("fadeInUp delay-1s fast");
     });
-    
     //********** /ABOUTME *****************/
 
 
@@ -79,7 +97,20 @@ $(document).ready(function()
     }).on("exit", function(){
         $(".titleAchievements").removeClass("jackInTheBox");
     });
+
+    inView(".achieve-flip").on("enter", el => {
+        if($("#achievement-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            // console.log("num: "+ $("#achievement-section").find(el).length);
+            $(el).addClass("viewed flipInY");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("flipInY");
+    });
     /**************** /ACHIEVEMENTS **************/ 
+    
     /******* /END OF IN-VIEW SECTION ************************/
 
     $(".aboutMe").hover(
@@ -137,7 +168,7 @@ $(document).ready(function()
                     "margin" : "0 auto"
                 });
                 $(".card-body>.tbl-pinfo").css("marginLeft","2rem");
-                $(".card-body>.tbl-techskill").css("marginLeft","1.3rem");
+                $(".card-body>.tbl-techskill").css("marginLeft","0.7rem");
             } else {
                 $(".card-body>table").removeClass("ml-4 ml-2");
             }
@@ -255,7 +286,7 @@ $(document).ready(function()
             $(".aboutHead").css("fontSize", "2.5rem"); //title head
             $(".aboutMe>.card>.card-body").removeClass("p-5 ml-4").addClass("p-5");
             $(".card>.card-img-top").css({
-                "width" : "55%",
+                "width" : "35%",
                 "margin" : "0 auto"
             });
             $(".card-body>.tbl-pinfo").css("marginLeft","1rem");
@@ -289,7 +320,7 @@ $(document).ready(function()
             $(".aboutHead").css("fontSize", "2.5rem"); //title head
             $(".aboutMe>.card>.card-body").removeClass("p-5 ml-4").addClass("p-5");
             $(".card>.card-img-top").css({
-                "width" : "55%",
+                "width" : "35%",
                 "margin" : "0 auto"
             });
             // $(".card-body").css("border", "1px solid red");
