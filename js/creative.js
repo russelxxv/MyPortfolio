@@ -1,5 +1,6 @@
 (function($) {
-  "use strict"; // Start of use strict
+  "use strict"; // Start of use strictjQuery
+  // jQuery.noConflict();
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {

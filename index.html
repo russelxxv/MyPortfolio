@@ -142,7 +142,7 @@
           <!-- <span class="csm-divider"></span> -->
           <div class="card-body p-3 text-center mt-3">
             <h5 class="card-title animated" style="display: none;">Personal Info</h5>
-            <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-pinfo">
+            <table class="table table-borderless table-sm animated table-responsive tbl-pinfo">
               <tbody class="cus-tbl">
                 <tr>
                   <th scope="row"><i class="fas fa-home"></i></th>
@@ -208,7 +208,7 @@
           <!-- <span class="csm-divider"></span> -->
           <div class="card-body p-3 text-center mt-3">
             <h5 class="card-title animated" style="display: none;">Technologies and Skills</h5>
-            <table class="table table-borderless table-sm ml-4 animated table-responsive tbl-techskill" id="tblCodes">
+            <table class="table table-borderless table-sm animated table-responsive tbl-techskill" id="tblCodes">
               <tbody class="cus-tbl-codes">
                 <tr>
                   <th scope="row"><i class="fab fa-html5"></i></th>
@@ -262,30 +262,42 @@
   </section>
 
   <!-- ACHIEVEMENT Section -->
-  <section class="page-section" id="achievement-section" data-inview="achievement-section">
-    <div class="container">
-      <h2 class="text-center mt-0 titleAchievements animated">ACHIEVEMENTS</h2>
+  <section class="page-section p-5" id="achievement-section" data-inview="achievement-section">
+    <!-- <div class="container"> -->
+      <h2 class="titleAchievements text-center mt-0 animated">ACHIEVEMENTS</h2>
       <hr class="divider my-4">
-      <div class="row">
-        <div class="m-flip col-lg-4 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-graduation-cap text-dark mb-4"></i>
-            <h3 class="h4 mb-2">Cum Laude</h3>
-            <p class="text-muted mb-0">Achieving this award, proving that I am flexible enough to take any responsibilities as a <strong>Web Developer</strong> of your company.</p>
+      <div class="row justify-content-center">
+        <div class="achieve-flip col-lg-4 col-xl-4 col-md-6 text-center">
+          <div class="front">
+            <i class="fas fa-graduation-cap text-dark mb-5"></i>
+            <h3 class="h4">Cum Laude</h3>
+            <p class="text-muted">Achieving this award, proving that I am flexible enough to take any responsibilities as a <strong>Web Developer</strong> of your company.</p>
+          </div>
+          <div class="back">
+            <img src="img/rs-cumlaude-min.jpg" class="achive-img rounded-circle" alt="Graduation Picture">
+            <h3 class="h4 mt-3">Cum Laude</h3>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 text-center back">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-laptop-code text-dark mb-4"></i>
-            <h3 class="h4 mb-2">Programmer of the Year</h3>
-            <p class="text-muted mb-0">One of the 5 programmer of the year.</p>
+        <div class="achieve-flip col-lg-4 col-md-6 text-center">
+          <div class="front">
+            <i class="fas fa-laptop-code text-dark mb-5"></i>
+            <h3 class="h4">Programmer of the Year</h3>
+            <p class="text-muted">One of the 5 programmer of the year.</p>
+          </div>
+          <div class="back">
+            <img src="img/rs-programmer-min.jpg" class="achive-img rounded-circle" alt="Programmer of the Year">
+            <h3 class="h4 mt-3">Programmer of the Year</h3>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-dark mb-4"></i>
-            <h3 class="h4 mb-2">Best Capstone Project</h3>
-            <p class="text-muted mb-0">The Speaking Glove using Raspberry Pi, Arduino, Flex Sensors, Accelerometer Sensor and Android Studio IDE for developing Android Application.</p>
+        <div class="achieve-flip col-lg-4 col-md-6 text-center">
+          <div class="front">
+            <i class="fas fa-gem text-dark mb-5"></i>
+            <h3 class="h4">Best Capstone Project</h3>
+            <p class="text-muted">The Speaking Glove using Raspberry Pi, Arduino, Flex Sensors, Accelerometer Sensor and Android Studio IDE for developing Android Application.</p>
+          </div>
+          <div class="back">
+            <img src="img/rs-capstone-min.jpg" class="achive-img rounded-circle" alt="Best Capstone Project">
+            <h3 class="h4">Best Capstone Project</h3>
           </div>
         </div>
         <!-- <div class="col-lg-3 col-md-6 text-center">
@@ -296,7 +308,7 @@
           </div>
         </div> -->
       </div>
-    </div>
+    <!-- </div> -->
   </section>
 
   <!-- Portfolio Section -->
@@ -472,6 +484,9 @@
   <script src="https://kit.fontawesome.com/c76bb2aadf.js"></script>
   <!-- in-view-js -->
   <script src="js/in-view.min.js"></script>
+
+  <!-- flip js -->
+  <script src="js/jquery.flip.min.js"></script>
 
 
   <!-- Custom scripts for this template -->
