@@ -10,6 +10,49 @@ $(document).ready(function()
     $(".achieve-flip").flip({
         trigger: "hover",
     });
+
+    // for my resume link
+    $(".mResume-link").click( ()=> {
+        swal({
+            title: "On Development",
+            content: {
+                element: "i",
+                attributes: {
+                    className: "fas fa-3x fa-laugh-wink rounded-circle",
+                    style: "color: rgb(252, 209, 118)"
+                }
+            }
+        });
+    });
+
+    // for project link on click event
+    $(".project-link").click( function() {
+        var elLink = $(this).data("projlink");
+        console.log("manok: "+ elLink);
+        if(elLink == "not-set")
+        {
+            swal({
+                icon: "info",
+                title: "Sorry this page is not yet Live"
+            });
+            return;
+        }
+        if(elLink == "not-available")
+        {
+            swal({
+                icon: "info",
+                title: "Sorry this page is not available in public"
+            });
+            return;
+        }
+        swal({
+            icon: "success",
+            title: "Page Redirecting ..."
+        });
+        window.open(elLink, "_blank");
+        return;
+    });
+
     /**** IN-VIEW SECTION *********************/
 
     /*************** HEADER **************/
@@ -35,35 +78,6 @@ $(document).ready(function()
         $(".aboutHead").removeClass("jackInTheBox");
     });
 
-    /* inView(".aboutMe>.card").on("enter", function() {
-        if($("#aboutme-section").hasClass("animeted-false")){
-            return false;
-        }
-        if(!$(".aboutMe>.card").hasClass("viewed"))
-        {
-            $(".aboutMe").removeClass("finished-animating");
-            $(".aboutMe>.card").addClass("viewed zoomIn fast",
-            function(){
-                if(!$(".card-body>table").hasClass("viewed")){
-                    $(".card-body>table").addClass("viewed fadeInUp delay-1s fast",
-                    function(){
-                        if(!$(".card>img").hasClass("viewed")){
-                            $(".card>img").addClass("viewed bounce",
-                            function() {
-                                $(".aboutMe").addClass("finished-animating");
-                            });
-                        }
-                    });
-                }
-            });
-        }
-    }).on("exit", function() {
-        $(".aboutMe>.card").removeClass("zoomIn fast");
-        $(".card-body>table").removeClass("fadeInUp delay-1s fast");
-        $(".card>img").removeClass("bounce");
-        // $(".aboutMe").removeClass("finished-animating");
-    }); */
-
     inView(".aboutMe>.card").on("enter", el => {
         if($("#aboutme-section").hasClass("animeted-false")){
             return false;
@@ -81,6 +95,12 @@ $(document).ready(function()
     }).on("exit", el => {
         $(el).removeClass("zoomIn fast");
         $(".card-body>table", el).removeClass("fadeInUp delay-1s fast");
+    });
+
+    inView(".myResume").on("enter", el => {
+        $(el).addClass("jello infinite");
+    }).on("exit", el => {
+        $(el).ready("jello infinite");
     });
     //********** /ABOUTME *****************/
 
@@ -109,10 +129,80 @@ $(document).ready(function()
     }).on("exit", el => {
         $(el).removeClass("flipInY");
     });
-    /**************** /ACHIEVEMENTS **************/ 
+    /**************** /ACHIEVEMENTS **************/
+
+    /**************** PORTFOLIO SECTION */
+    inView(".portfolio-container").on("enter", el => {
+        if($("#portfolio-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            $(el).addClass("viewed bounceIn");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("bounceIn");
+    });
+    /**************** /PORTFOLIO SECTION */
+
+    /**************** EXTRA SECTION */
+    inView(".extra-section").on("enter", el => {
+        $(el).addClass("heartBeat infinite fast delay-1s");
+    }).on("exit", el => {
+        $(el).removeClass("heartBeat infinite fast delay-1s");
+    });
+    /**************** /EXTRA SECTION */
+
+    /**************** CONTACT SECTION */
+    // contact title
+    inView(".contactTitle").on("enter", el => {
+        if($("#contact-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            $(el).addClass("viewed fadeInDown");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("fadeInDown");
+    });
+    // contact phone
+    inView(".contactPhone").on("enter", el => {
+        if($("#contact-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            $(el).addClass("viewed slideInLeft");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("slideInLeft");
+    });
+    // contact gmail
+    inView(".contactGmail").on("enter", el => {
+        if($("#contact-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            $(el).addClass("viewed slideInRight");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("slideInRight");
+    });
+    // contact Social Icons
+    inView(".contactSocial").on("enter", el => {
+        if($("#contact-section").hasClass("animeted-false")){
+            return false;
+        }
+        if(!$(el).hasClass("viewed")){
+            $(el).addClass("viewed fadeInUp");
+        }
+    }).on("exit", el => {
+        $(el).removeClass("fadeInUp");
+    });
+
+    /**************** /CONTACT SECTION */
     
     /******* /END OF IN-VIEW SECTION ************************/
 
+    /*********************** ON HOVER EVENT */
     $(".aboutMe").hover(
         function() {
             if($(this).hasClass("finished-animating"))
@@ -137,9 +227,18 @@ $(document).ready(function()
             $("a", this).removeClass("hvr-grow");
         }
     );
-    /******** /END OF FOR SCROLLING THE PAGE ANIMATION */
-    
 
+    $(".contactSocialIcons").hover(
+        function() {
+            $(this).addClass("hvr-float-shadow");
+        },
+        function() {
+            $(this).removeClass("hvr-float-shadow");
+        }
+    );
+    /******************** /END OF ON HOVER SECTION */
+    
+    /*************************** ON WINDOW SIZE AND LOAD */
     getWindowSize();
 
     // for resizing the page
@@ -354,4 +453,5 @@ $(document).ready(function()
         }
         /******* /END OF DESKTOP VIEW */
     }
+    /********** /END OF IN WINDOW SIZE & LOAD */
 }); // end of document.ready function

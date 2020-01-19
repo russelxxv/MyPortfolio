@@ -10813,7 +10813,7 @@ header.masthead h1 {
 }
 
 #portfolio-section .container-fluid .portfolio-box:hover .portfolio-box-caption {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .avatar {
