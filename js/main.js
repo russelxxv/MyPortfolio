@@ -243,7 +243,7 @@ $(document).ready(function()
 
     // for resizing the page
     $(window).on("resize", function(){
-        // $(".loader").show();
+        $(".loader").show();
         getWindowSize();
     });
 
@@ -269,21 +269,24 @@ $(document).ready(function()
                 });
                 $(".card-body>.tbl-pinfo").css("marginLeft","2rem");
                 $(".card-body>.tbl-techskill").css("marginLeft","0.7rem");
-                // $(".loader").fadeOut();
+                $(".loader").fadeOut();
             }
             /********** /END OF ABOUT ME SECTION */
 
             /********* ACHIEVEMENT SECTION */
             $(".achieve-flip").css({
-                "marginTop" : "2rem",
-                "marginBottom" : "2rem"
+                "marginTop" : "3rem",
+                "marginBottom" : "3rem"
             });
             $(".titleAchievements").css("fontSize", "2rem");
             $(".achieve-flip>.front").css({
                 "paddingRight":"2rem"
             });
-            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
-            $(".achieve-flip>.front>h3").css("paddingBottom","2rem");
+            $(".achieve-flip>.front>.fas").css({
+                "fontSize" : "5em",
+                "paddingBottom" : "1rem"
+            });
+            $(".achieve-flip>.front>h3").css("paddingBottom","0.3rem");
             $(".achieve-flip>.back>img").css({
                 "width" : "90%",
                 "heigth" : "90%",
@@ -291,7 +294,7 @@ $(document).ready(function()
             });
             /********* /END OF ACHIEVEMENT SECTION */
 
-            // $(".loader").fadeOut();
+            $(".loader").fadeOut();
             return; // always last
         }
         if(winWidth >= 426 && winWidth <= 765)
@@ -316,7 +319,10 @@ $(document).ready(function()
                 "paddingRight":"2rem",
                 "marginTop":"0.5rem"
             });
-            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
+            $(".achieve-flip>.front>.fas").css({
+                "fontSize" : "5em",
+                "paddingBottom" : "1rem"
+            });
             $(".achieve-flip>.front>h3").css("marginBottom","0.5rem");
             $(".achieve-flip>.back>img").css({
                 "width" : "80%",
@@ -329,10 +335,10 @@ $(document).ready(function()
                     "heigth" : "60%",
                     "cursor" : "pointer"
                 });
-                // $(".loader").fadeOut();
+                $(".loader").fadeOut();
             }
             /********* /END OF ACHIEVEMENT SECTION */
-            // $(".loader").fadeOut();
+            $(".loader").fadeOut();
             return; // always last
         }
         /********************* /END OF MOBIL VIEW  */
@@ -367,14 +373,17 @@ $(document).ready(function()
                 "paddingRight":"2rem",
                 "marginTop":"1rem"
             });
-            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
+            $(".achieve-flip>.front>.fas").css({
+                "fontSize" : "5em",
+                "paddingBottom" : "1.5rem"
+            });
             $(".achieve-flip>.back>img").css({
                 "width" : "80%",
                 "heigth" : "80%",
                 "cursor" : "pointer"
             });
             /******** /END OF ACHIEVEMENT SECTION */
-            // $(".loader").fadeOut();
+            $(".loader").fadeOut();
             return; // always last
         }
         /******* /END OF TABLET VIEW */
@@ -404,14 +413,17 @@ $(document).ready(function()
                 "paddingRight":"2rem",
                 "marginTop":"1rem"
             });
-            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
+            $(".achieve-flip>.front>.fas").css({
+                "fontSize" : "5em",
+                "paddingBottom" : "1.5rem"
+            });
             $(".achieve-flip>.back>img").css({
                 "width" : "80%",
                 "heigth" : "80%",
                 "cursor" : "pointer"
             });
             /**** /END OF ACHIEVEMENT SECTION */
-            // $(".loader").fadeOut();
+            $(".loader").fadeOut();
             return; // always last
         }
         if(winWidth >= 1200)
@@ -442,7 +454,10 @@ $(document).ready(function()
                 "paddingRight":"2rem",
                 "marginTop":"2rem"
             });
-            $(".achieve-flip>.front>.fas").css("fontSize", "5em");
+            $(".achieve-flip>.front>.fas").css({
+                "fontSize" : "5em",
+                "paddingBottom" : "1.5rem"
+            });
             $(".achieve-flip>.front>p").css({
                 "padding" : "1rem"
             });
@@ -452,7 +467,7 @@ $(document).ready(function()
                 "cursor" : "pointer"
             });
             /**** /END OF ACHIEVEMENT SECTION */
-            // $(".loader").fadeOut();
+            $(".loader").fadeOut();
             return; // always last
         }
         /******* /END OF DESKTOP VIEW */
