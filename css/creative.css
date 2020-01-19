@@ -10722,7 +10722,7 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px); /*-webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))),*/
   /* background:  -webkit-gradient(left top, right top, color-stop(0%, rgba(235,233,249,1)), color-stop(16%, rgba(229,225,246,0.28)), color-stop(50%, rgba(216,208,239,0.28)), color-stop(51%, rgba(206,199,236,0.28)), color-stop(100%, rgba(193,191,234,0.28))), url("../img/bg-masthead.jpg"); */
-  background: url("../img/bg-nav.jpg");
+  background: url("../img/banner/bg-nav.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
