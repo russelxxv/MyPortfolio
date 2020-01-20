@@ -14,7 +14,7 @@ $(document).ready(function()
     // for my resume link
     $(".mResume-link").click( ()=> {
         swal({
-            title: "On Development",
+            title: "Under Development",
             content: {
                 element: "i",
                 attributes: {
@@ -33,7 +33,7 @@ $(document).ready(function()
         {
             swal({
                 icon: "info",
-                title: "Sorry this page is not yet Live"
+                title: "This page is not yet Live"
             });
             return;
         }
@@ -41,7 +41,7 @@ $(document).ready(function()
         {
             swal({
                 icon: "info",
-                title: "Sorry this page is not available in public"
+                title: "This page is not available in public"
             });
             return;
         }
