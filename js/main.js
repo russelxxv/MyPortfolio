@@ -145,11 +145,11 @@ $(document).ready(function()
     /**************** /PORTFOLIO SECTION */
 
     /**************** EXTRA SECTION */
-    inView(".extra-section").on("enter", el => {
-        $(el).addClass("heartBeat infinite fast delay-1s");
-    }).on("exit", el => {
-        $(el).removeClass("heartBeat infinite fast delay-1s");
-    });
+    // inView(".extra-section").on("enter", el => {
+    //     $(el).addClass("heartBeat infinite fast delay-1s");
+    // }).on("exit", el => {
+    //     $(el).removeClass("heartBeat infinite fast delay-1s");
+    // });
     /**************** /EXTRA SECTION */
 
     /**************** CONTACT SECTION */
