@@ -1,0 +1,16 @@
+/*** 
+ CSS only for my resume.html
+*/
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: black !important;
+}
+/* temporary color*/
+.list-group-item {
+    color: black !important;
+}
+.resume-avatar {
+    height: 100%;
+    width: 100%;
+}
